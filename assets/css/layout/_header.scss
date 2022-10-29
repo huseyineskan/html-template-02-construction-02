@@ -1,0 +1,88 @@
+header{
+
+    width: 100%;
+    @include align();
+
+    .logo{
+        a{
+            @include align(center);
+
+            img{
+                width: 50px;
+            }
+
+            span{
+                font-weight: bold;
+                font-size: 22px;
+            }
+        }
+    }
+
+    nav{
+        position: absolute;
+        overflow: hidden;
+        background-color: $primary;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include align(center);
+        text-align: center;
+        opacity: 0;
+        transition: 0.4s;
+        z-index: -1;
+
+        a{
+            display: inline-block;
+            color: $light;
+            padding-bottom: 30px;
+            font-size: 2.5rem;
+        }
+    }
+
+    .open-menu{
+        z-index: 99;
+        
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .open-menu > div{
+        width: 35px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: $primary;
+        transition: 0.4s;
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+
+    }
+}
+
+
+.iconChange{
+    .bar1{
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        background-color: $light;
+    }
+
+    .bar2{
+        opacity: 0;
+    }
+
+    .bar3{
+        -webkit-transform: rotate(45deg);
+        background-color: $light;
+    }
+}
+
+.showMenu{
+    display: flex;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 9;
+}

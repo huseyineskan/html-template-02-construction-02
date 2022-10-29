@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  color: #45434C;
+  background-color: #0C7B88;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #45434C;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .logo a img {
+  width: 50px;
+}
+
+header .logo a span {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+header nav {
+  position: absolute;
+  overflow: hidden;
+  background-color: #0C7B88;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+header nav a {
+  display: inline-block;
+  color: #fff;
+  padding-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+header .open-menu {
+  z-index: 99;
+}
+
+header .open-menu:hover {
+  cursor: pointer;
+}
+
+header .open-menu > div {
+  width: 35px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0C7B88;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header .open-menu > div:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.iconChange .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: #fff;
+}
+
+.iconChange .bar2 {
+  opacity: 0;
+}
+
+.iconChange .bar3 {
+  -webkit-transform: rotate(45deg);
+  background-color: #fff;
+}
+
+.showMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 9;
+}
+
+.window {
+  background-image: url(/assets/img/pattern-light.svg);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+}
+
+.window .container {
+  background-image: url(/assets/img/announc.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 70%;
+  padding: 20px 10px 0;
+  height: 100%;
+}
+
+.window .container section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  min-height: 200px;
+  font-size: 1.7rem;
+  color: #0C7B88;
+  padding-top: 70px;
+}
+
+.window .container section p {
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(/assets/img/pattern.svg), url(/assets/img/circle.svg);
+    background-size: 500px, 200px;
+    background-position: left top, 15% 90%;
+    background-repeat: no-repeat;
+    -webkit-animation: scaleImage 2s alternate infinite;
+            animation: scaleImage 2s alternate infinite;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .window {
+    width: 90%;
+    max-width: 1080px;
+    max-height: 600px;
+    -webkit-box-shadow: 0 0 10px 7px #0c7188, -5px 40px 50px rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 10px 7px #0c7188, -5px 40px 50px rgba(255, 255, 255, 0.4);
+  }
+  .window .container {
+    padding: 50px;
+    background-size: 60%;
+    background-position: 70% center;
+  }
+  .window .container section {
+    padding-top: 40px;
+    font-size: clamp(16px, 3vw, 36px);
+  }
+}
+
+@-webkit-keyframes scaleImage {
+  to {
+    background-size: 560px, 220px;
+    background-position: left top, 4% 100%;
+  }
+}
+
+@keyframes scaleImage {
+  to {
+    background-size: 560px, 220px;
+    background-position: left top, 4% 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
